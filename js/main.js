@@ -1,6 +1,6 @@
 'use strict';
 
-// Бурген меню
+// Бургер меню
 const burgerMenuElement = document.getElementById('burger-menu');
 const mobileNavElement = document.getElementById('mobile-nav');
 
@@ -43,19 +43,6 @@ fetch('./../data/products.json')
 				templateCard(product)
 			);
 		});
-		// зміна кольору сердечок на картках з товаром
-		// const favButtonElements = document.querySelectorAll('.card__fav-button');
-		// console.log(favButtonElements);
-		// favButtonElements.forEach(function (el) {
-		// 	el.addEventListener('click', function () {
-		// 		console.log('ura');
-		// 	});
-		// });
-		// cardContainerElement.addEventListener('click', function (e) {
-		// 	if (e.target.closest('.card__fav-button')) {
-		// 		console.log('ura');
-		// 	}
-		// });
 		document
 			.getElementById('card-container')
 			.addEventListener('click', function (e) {
