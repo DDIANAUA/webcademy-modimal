@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="shortcut icon"
+			href="./image/favicons/favicon.svg"
+			type="image/x-icon" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="./styles/style.css" />
+
+		<title>Modimal</title>
+	</head>
+	<body>
+		<svg width="0" height="0" class="hidden">
+			<symbol
+				xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 24 24"
+				id="favorite">
+				<path
+					d="M16.5 3.82422C19.0277 3.82422 21 5.7965 21 8.32422C21 9.88575 20.3066 11.3809 18.8818 13.124C17.4459 14.8807 15.3736 16.7645 12.7793 19.1221L12.002 19.8232L11.2236 19.1143L11.2217 19.1133C8.62662 16.7601 6.55418 14.8777 5.11816 13.1221C3.69361 11.3804 3 9.88574 3 8.32422C3 5.7965 4.97228 3.82422 7.5 3.82422C8.93712 3.82422 10.3319 4.49822 11.2383 5.5625L12 6.45703L12.7617 5.5625C13.6681 4.49822 15.0629 3.82422 16.5 3.82422Z"
+					stroke-width="2"></path>
+			</symbol>
+			<symbol
+				xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 24 24"
+				id="person">
+				<path
+					d="M18.39 15.06C16.71 14.2 14.53 13.5 12 13.5C9.47 13.5 7.29 14.2 5.61 15.06C4.61 15.57 4 16.6 4 17.72V20.5H20V17.72C20 16.6 19.39 15.57 18.39 15.06ZM18 18.5H6V17.72C6 17.34 6.2 17 6.52 16.84C7.71 16.23 9.63 15.5 12 15.5C14.37 15.5 16.29 16.23 17.48 16.84C17.8 17 18 17.34 18 17.72V18.5Z"></path>
+				<path
+					d="M12 12.5C14.21 12.5 16 10.71 16 8.5C16 7.13 16 5 16 5C16 4.17 15.33 3.5 14.5 3.5C13.98 3.5 13.52 3.77 13.25 4.17C12.98 3.77 12.52 3.5 12 3.5C11.48 3.5 11.02 3.77 10.75 4.17C10.48 3.77 10.02 3.5 9.5 3.5C8.67 3.5 8 4.17 8 5C8 5 8 7.12 8 8.5C8 10.71 9.79 12.5 12 12.5ZM10 6H14V8.5C14 9.6 13.1 10.5 12 10.5C10.9 10.5 10 9.6 10 8.5V6Z"></path>
+			</symbol>
+			<symbol
+				xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 24 24"
+				id="search">
+				<path
+					d="M15.7549 14.2539H14.9649L14.6849 13.9839C15.6649 12.8439 16.2549 11.3639 16.2549 9.75391C16.2549 6.16391 13.3449 3.25391 9.75488 3.25391C6.16488 3.25391 3.25488 6.16391 3.25488 9.75391C3.25488 13.3439 6.16488 16.2539 9.75488 16.2539C11.3649 16.2539 12.8449 15.6639 13.9849 14.6839L14.2549 14.9639V15.7539L19.2549 20.7439L20.7449 19.2539L15.7549 14.2539ZM9.75488 14.2539C7.26488 14.2539 5.25488 12.2439 5.25488 9.75391C5.25488 7.26391 7.26488 5.25391 9.75488 5.25391C12.2449 5.25391 14.2549 7.26391 14.2549 9.75391C14.2549 12.2439 12.2449 14.2539 9.75488 14.2539Z"></path>
+			</symbol>
+			<symbol
+				xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 24 24"
+				id="bag">
+				<path
+					d="M18 6H16C16 3.79 14.21 2 12 2C9.79 2 8 3.79 8 6H6C4.9 6 4 6.9 4 8V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V8C20 6.9 19.1 6 18 6ZM12 4C13.1 4 14 4.9 14 6H10C10 4.9 10.9 4 12 4ZM18 20H6V8H8V10C8 10.55 8.45 11 9 11C9.55 11 10 10.55 10 10V8H14V10C14 10.55 14.45 11 15 11C15.55 11 16 10.55 16 10V8H18V20Z"></path>
+			</symbol>
+			<symbol
+				xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 24 24"
+				id="arrow-down">
+				<path
+					d="M7.41 8.29688L12 12.8769L16.59 8.29688L18 9.70687L12 15.7069L6 9.70687L7.41 8.29688Z"></path>
+			</symbol>
+		</svg>
+		<div class="wrapper">
+			<section class="top-info">
+				<div class="top-info__container">
+					<div class="top-info__text">
+						Enjoy Free Shipping On All Orders
+					</div>
+				</div>
+			</section>
+			<header class="header">
+				<div class="header__container">
+					<div class="header__row">
+						<a href="#!" class="header__logo">
+							<img src="./image/logo/Logo.svg" alt="logo" />
+						</a>
+						<nav class="header__nav nav">
+							<ul class="nav__list">
+								<li class="nav__item">
+									<a href="#!" class="nav__link">Collection</a>
+								</li>
+								<li class="nav__item">
+									<a href="#!" class="nav__link">Modiweek</a>
+								</li>
+								<li class="nav__item">
+									<a href="#!" class="nav__link">Plus Size</a>
+								</li>
+								<li class="nav__item">
+									<a href="#!" class="nav__link">Sustainability</a>
+								</li>
+							</ul>
+						</nav>
+						<div class="header__account header__account--first account">
+							<ul class="account__list">
+								<li class="account__item">
+									<button
+										type="button"
+										class="account__nav-btn nav-btn"
+										id="burger-menu">
+										<span></span>
+										<span></span>
+										<span></span>
+									</button>
+								</li>
+								<li class="account__item">
+									<a href="#!" class="account__link">
+										<svg class="icon icon--search">
+											<use xlink:href="#search"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="account__item">
+									<a href="#!" class="account__link">
+										<svg class="icon icon--person">
+											<use xlink:href="#person"></use>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="header__account account">
+							<ul class="account__list">
+								<li class="account__item">
+									<a href="#!" class="account__link">
+										<svg class="icon icon--favorite">
+											<use xlink:href="#favorite"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="account__item">
+									<a href="#!" class="account__link">
+										<svg class="icon icon--bag">
+											<use xlink:href="#bag"></use>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</header>
+			<div class="mobile-nav" id="mobile-nav">
+				<div class="mobile-nav__links">
+					<ul class="mobile-nav__list-parent list-parent">
+						<li class="list-parent__item">
+							<a href="#!" class="list-parent__link">
+								<span class="list-parent__title">new in</span>
+								<svg class="mobile-nav__icon icon icon--arrow-down">
+									<use xlink:href="#arrow-down"></use>
+								</svg>
+							</a>
+							<div class="list-parent__wrapper">
+								<ul class="list-parent__sublist sublist">
+									<li class="sublist__item">
+										<a class="sublist__link" href="#!">shop all</a>
+									</li>
+									<li class="sublist__item">
+										<a class="sublist__link" href="#!"
+											>tops & blouses</a
+										>
+									</li>
+									<li class="sublist__item">
+										<a class="sublist__link" href="#!">tees</a>
+									</li>
+									<li class="sublist__item">
+										<a class="sublist__link" href="#!">pants</a>
+									</li>
+									<li class="sublist__item">
+										<a class="sublist__link" href="#!"
+											>jackets & outwears</a
+										>
+									</li>
+									<li class="sublist__item">
+										<a class="sublist__link" href="#!">pullovers</a>
+									</li>
+									<li class="sublist__item">
+										<a class="sublist__link" href="#!"
+											>dresses & jumpsuits</a
+										>
+									</li>
+									<li class="sublist__item">
+										<a class="sublist__link" href="#!"
+											>short & skirts</a
+										>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="list-parent__item">
+							<a href="#!" class="list-parent__link">
+								<span class="list-parent__title">collection</span>
+								<svg class="mobile-nav__icon icon icon--arrow-down">
+									<use xlink:href="#arrow-down"></use>
+								</svg>
+							</a>
+							<div class="list-parent__wrapper">
+								<ul class="list-parent__sublist sublist">
+									<li class="sublist__item">
+										<a class="sublist__link" href="#!">shop all</a>
+									</li>
+									<li class="sublist__item">
+										<a class="sublist__link" href="#!"
+											>tops & blouses</a
+										>
+									</li>
+									<li class="sublist__item">
+										<a class="sublist__link" href="#!">tees</a>
+									</li>
+									<li class="sublist__item">
+										<a class="sublist__link" href="#!">pants</a>
+									</li>
+									<li class="sublist__item">
+										<a class="sublist__link" href="#!"
+											>jackets & outwears</a
+										>
+									</li>
+									<li class="sublist__item">
+										<a class="sublist__link" href="#!">pullovers</a>
+									</li>
+									<li class="sublist__item">
+										<a class="sublist__link" href="#!"
+											>dresses & jumpsuits</a
+										>
+									</li>
+									<li class="sublist__item">
+										<a class="sublist__link" href="#!"
+											>short & skirts</a
+										>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="list-parent__item">
+							<a href="#!" class="list-parent__link">
+								<span class="list-parent__title">modiweek</span>
+								<svg class="mobile-nav__icon icon icon--arrow-down">
+									<use xlink:href="#arrow-down"></use>
+								</svg>
+							</a>
+							<div class="list-parent__wrapper">
+								<ul class="list-parent__sublist sublist">
+									<li class="sublist__item">
+										<a class="sublist__link" href="#!">shop all</a>
+									</li>
+									<li class="sublist__item">
+										<a class="sublist__link" href="#!"
+											>tops & blouses</a
+										>
+									</li>
+									<li class="sublist__item">
+										<a class="sublist__link" href="#!">tees</a>
+									</li>
+									<li class="sublist__item">
+										<a class="sublist__link" href="#!">pants</a>
+									</li>
+									<li class="sublist__item">
+										<a class="sublist__link" href="#!"
+											>jackets & outwears</a
+										>
+									</li>
+									<li class="sublist__item">
+										<a class="sublist__link" href="#!">pullovers</a>
+									</li>
+									<li class="sublist__item">
+										<a class="sublist__link" href="#!"
+											>dresses & jumpsuits</a
+										>
+									</li>
+									<li class="sublist__item">
+										<a class="sublist__link" href="#!"
+											>short & skirts</a
+										>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="list-parent__item">
+							<a href="#!" class="list-parent__link">
+								<span class="list-parent__title">plus size</span>
+								<svg class="mobile-nav__icon icon icon--arrow-down">
+									<use xlink:href="#arrow-down"></use>
+								</svg>
+							</a>
+							<div class="list-parent__wrapper">
+								<ul class="list-parent__sublist sublist">
+									<li class="sublist__item">
+										<a class="sublist__link" href="#!">shop all</a>
+									</li>
+									<li class="sublist__item">
+										<a class="sublist__link" href="#!"
+											>tops & blouses</a
+										>
+									</li>
+									<li class="sublist__item">
+										<a class="sublist__link" href="#!">tees</a>
+									</li>
+									<li class="sublist__item">
+										<a class="sublist__link" href="#!">pants</a>
+									</li>
+									<li class="sublist__item">
+										<a class="sublist__link" href="#!"
+											>jackets & outwears</a
+										>
+									</li>
+									<li class="sublist__item">
+										<a class="sublist__link" href="#!">pullovers</a>
+									</li>
+									<li class="sublist__item">
+										<a class="sublist__link" href="#!"
+											>dresses & jumpsuits</a
+										>
+									</li>
+									<li class="sublist__item">
+										<a class="sublist__link" href="#!"
+											>short & skirts</a
+										>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="list-parent__item">
+							<a href="#!" class="list-parent__link">
+								<span class="list-parent__title">sustainability </span>
+								<svg class="mobile-nav__icon icon icon--arrow-down">
+									<use xlink:href="#arrow-down"></use>
+								</svg>
+							</a>
+							<div class="list-parent__wrapper">
+								<ul class="list-parent__sublist sublist">
+									<li class="sublist__item">
+										<a class="sublist__link" href="#!"
+											>shop mission</a
+										>
+									</li>
+									<li class="sublist__item">
+										<a class="sublist__link" href="#!"
+											>tops & processing</a
+										>
+									</li>
+									<li class="sublist__item">
+										<a class="sublist__link" href="#!">materials</a>
+									</li>
+									<li class="sublist__item">
+										<a class="sublist__link" href="#!">packaging</a>
+									</li>
+									<li class="sublist__item">
+										<a class="sublist__link" href="#!"
+											>jackets & product care</a
+										>
+									</li>
+									<li class="sublist__item">
+										<a class="sublist__link" href="#!"
+											>our suppliers</a
+										>
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="mobile-nav__buttons">
+					<a href="#!" class="mobile-nav__button">
+						<svg class="icon icon--person">
+							<use xlink:href="#person"></use></svg
+						>Log In</a
+					>
+					<a href="#!" class="mobile-nav__button">Create Account</a>
+				</div>
+			</div>
+			<main class="page">
+				<section class="page__hero hero">
+					<div class="hero__container">
+						<div class="hero__content">
+							<h1 class="hero__title">
+								Elegance in simplicity, Earth’s harmony
+							</h1>
+							<a href="#!" class="hero__button button">New In</a>
+						</div>
+					</div>
+				</section>
+				<section class="page__best-sellers best-sellers">
+					<div class="best-sellers__container">
+						<div class="best-sellers__title-wrapper">
+							<h2 class="best-sellers__title title">Best sellers</h2>
+							<a href="#!" class="best-sellers__view-all-button">
+								view all
+							</a>
+						</div>
+						<div class="best-sellers__cards">
+							<div class="swiper">
+								<div class="swiper-wrapper" id="card-container"></div>
+								<div class="swiper-pagination"></div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="page__collection collection">
+					<div class="collection__container">
+						<h2 class="collection__title title">collection</h2>
+						<div class="collection__body">
+							<div class="collection__col">
+								<article class="collection__card card-collection">
+									<div class="card-collection__img">
+										<img
+											src="./image/collection/collection-01.jpg"
+											alt="blouses" />
+									</div>
+									<a href="#!" class="card-collection__button button"
+										>Blouses</a
+									>
+								</article>
+								<article class="collection__card card-collection">
+									<div class="card-collection__img">
+										<img
+											src="./image/collection/collection-02.jpg"
+											alt="Dresses" />
+									</div>
+									<a href="#!" class="card-collection__button button"
+										>Dresses</a
+									>
+								</article>
+							</div>
+							<div class="collection__col">
+								<article class="collection__card card-collection">
+									<div class="card-collection__img">
+										<img
+											src="./image/collection/collection-03.jpg"
+											alt="blouses" />
+									</div>
+									<a href="#!" class="card-collection__button button"
+										>Pants</a
+									>
+								</article>
+								<article class="collection__card card-collection">
+									<div class="card-collection__img">
+										<img
+											src="./image/collection/collection-04.jpg"
+											alt="Dresses" />
+									</div>
+									<a href="#!" class="card-collection__button button"
+										>Outwear</a
+									>
+								</article>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="page__follow-us follow-us">
+					<div class="follow-us__container">
+						<h2 class="follow-us__title title">follow us</h2>
+						<div class="follow-us__body">
+							<div class="follow-us__img">
+								<img src="./image/follow/follow-01.jpg" alt="01" />
+							</div>
+							<div class="follow-us__img">
+								<img src="./image/follow/follow-02.jpg" alt="02" />
+							</div>
+							<div class="follow-us__img">
+								<img src="./image/follow/follow-03.jpg" alt="03" />
+							</div>
+							<div class="follow-us__img">
+								<img src="./image/follow/follow-04.jpg" alt="04" />
+							</div>
+							<div class="follow-us__img">
+								<img src="./image/follow/follow-05.jpg" alt="05" />
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			<footer class="footer">
+				<div class="footer__container">
+					<div class="footer__copy">
+						2024 modimal. All Rights Reserved.
+					</div>
+				</div>
+			</footer>
+			<!-- <script src="./js/swiperSet.js"></script> -->
+			<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+			<script src="./js/main.js"></script>
+		</div>
+	</body>
+</html>
+
+<!-- 
+<svg class="icon">
+  <use xlink:href="#favorite"></use>
+</svg><svg class="icon">
+  <use xlink:href="#search"></use>
+</svg><svg class="icon">
+  <use xlink:href="#bag"></use>
+</svg>
+ -->
